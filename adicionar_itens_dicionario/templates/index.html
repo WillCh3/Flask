@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <div id="form_frutas">
+            <h2>Adicione um aluno e sua nota</h2>
+            <form action="{{url_for('index')}}" method="post">
+                <label class="label_text" for="add_aluno">Aluno:</label>
+                <input type="text" name="aluno" id="add_aluno">
+                <label class="label_text" for="add_nota">Nota:</label>
+                <input type="text" name="nota" id="add_nota">
+                <button type="submit">Gravar</button>
+            </form>
+        </div>
+        <div id="tabela_frutas">
+            <h2>Notas alunos</h2>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Nota</th>
+                </tr>
+                {% for aluno, nota in notas.items() %}
+                <tr>
+                    <td>{{loop.index0}}</td>
+                    <td>{{aluno}}</td>
+                    <td>{{nota}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</body>
+</html>
