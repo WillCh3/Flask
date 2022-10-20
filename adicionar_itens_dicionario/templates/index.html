@@ -13,9 +13,9 @@
             <h2>Adicione um aluno e sua nota</h2>
             <form action="{{url_for('index')}}" method="post">
                 <label class="label_text" for="add_aluno">Aluno:</label>
-                <input type="text" name="aluno" id="add_aluno">
+                <input type="text" name="aluno" id="add_aluno" required>
                 <label class="label_text" for="add_nota">Nota:</label>
-                <input type="text" name="nota" id="add_nota">
+                <input type="text" name="nota" id="add_nota" required>
                 <button type="submit">Gravar</button>
             </form>
         </div>
