@@ -47,7 +47,6 @@ tr:nth-child(even) {
 #form_frutas form{
   width: 360px;
   height: 200px;
-  background-color: aquamarine;
 }
 
 #form_frutas input{
