@@ -12,7 +12,7 @@ def index():
         if request.form.get('aluno') and request.form.get('nota'):
             notas[request.form.get('aluno')]= request.form.get('nota')
     return render_template('index.html', notas= notas)
-
+    
 
 if __name__ == '__main__':
     app.run(debug=True)
